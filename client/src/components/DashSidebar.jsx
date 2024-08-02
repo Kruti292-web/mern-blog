@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function DashSidebar() {
   const location = useLocation();
-  const [tab, setTab] = useState("");
+  const [tab, setTab] = useState('');
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
     const tabFromUrl = urlParams.get("tab");
