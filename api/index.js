@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 import authRoutes from "./routes/auth.route.js";
 import userRoutes from "./routes/user.route.js";
 import postRoutes from './routes/post.route.js';
+import commentRoutes from './routes/comment.route.js';
 import cookieParser from "cookie-parser";
 dotenv.config();
 
@@ -25,6 +26,7 @@ const port = 3000;
 app.use(express.json());
 app.use(cookieParser());
 app.use('/api/post', postRoutes);
+app.use('/api/comment', commentRoutes);
 
 
 app.listen(port, () => {
